@@ -26,7 +26,8 @@ export class AppService {
 
   getData(token: string) : Observable<Data[]> {
     this.header = this.header.set('Authorization', 'Bearer '+token)
-    return this.httpClient.get<Data[]>('http://localhost:8080/api/books',{'headers':this.header});
+    console.log(this.header);
+    return this.httpClient.get<Data[]>('http://localhost:8080/events',{'headers':this.header});
   }
 
 

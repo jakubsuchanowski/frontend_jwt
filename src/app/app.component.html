@@ -19,15 +19,23 @@
 <table class="table table-striped">
   <thead>
   <tr>
-    <th scope="col">Title</th>
-    <th scope="col">Author</th>
+    <th scope="col">Name</th>
+    <th scope="col">Date</th>
+    <th scope="col">Phone number</th>
+    <th scope="col">Address</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let element of data; index as i">
-    <th scope="row">{{element.title}}</th>
+    <th scope="row">{{element.name}}</th>
     <td>
-      {{element.author}}
+      {{element.date}}
+    </td>
+    <td>
+      {{element.phoneNumber}}
+    </td>
+    <td>
+      {{element.address}}
     </td>
   </tr>
   </tbody>

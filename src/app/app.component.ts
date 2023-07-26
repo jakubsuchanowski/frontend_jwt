@@ -31,13 +31,14 @@ export class AppComponent implements OnInit {
 
   getData(token: string) {
     this.appService.getData(token).subscribe((res: any) => {
-      console.log(res);
       this.data=res;
     })
   }
 }
 
 export interface Data{
-  title: string;
-  author: string;
+  name: string;
+  date: string;
+  phoneNumber: string;
+  address: string;
 }
